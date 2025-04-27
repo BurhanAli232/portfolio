@@ -1,13 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Typed.js only for desktop view (>768px)
-    if (window.innerWidth > 768) {
-        var typed = new Typed('#typed', {
-            strings: ['Computer Science Student', 'AI | ML Engineer'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
+    // Function to initialize Typed.js with appropriate text based on screen size
+    function initializeTyped() {
+        const typedElement = document.getElementById('typed');
+        const staticTextElement = document.getElementById('static-text');
+
+        // Ensure the typed element is visible and static text is hidden
+        staticTextElement.style.display = 'none';
+        typedElement.style.display = 'block';
+
+        // Destroy any existing Typed instance to prevent multiple animations
+        if (window.typedInstance) {
+            window.typedInstance.destroy();
+            window.typedInstance = null;
+        }
+
+        // Choose the text to animate based on screen size
+        const isMobile = window.innerWidth <= 768;
+        const strings = isMobile ? ['AI | ML Engineer'] : ['Computer Science Student', 'AI | ML Engineer'];
+
+        // Initialize Typed.js
+        try {
+            window.typedInstance = new Typed('#typed', {
+                strings: strings,
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
+        } catch (error) {
+            console.error('Error initializing Typed.js:', error);
+            // Fallback: Show static text if Typed.js fails
+            staticTextElement.style.display = 'block';
+            typedElement.style.display = 'none';
+        }
     }
+
+    // Run Typed.js initialization on page load
+    initializeTyped();
+
+    // Reinitialize Typed.js on window resize if the screen crosses the 768px threshold
+    window.addEventListener('resize', function () {
+        const currentWidth = window.innerWidth;
+        const previousWidth = window.previousWidth || currentWidth;
+        window.previousWidth = currentWidth;
+
+        const crossedThreshold = (currentWidth <= 768 && previousWidth > 768) || (currentWidth > 768 && previousWidth <= 768);
+        if (crossedThreshold) {
+            initializeTyped();
+        }
+    });
 
     // Handle form submission
     const form = document.getElementById('contact-form');
@@ -114,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Path to the CV file
         const cvPath = 'Burhan_CV.pdf'; // Update this path if cv.pdf is in a different folder, e.g., 'docs/cv.pdf'
-
 
         // Create a temporary link element to trigger the download
         const link = document.createElement('a');
