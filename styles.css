@@ -63,6 +63,7 @@ h3 {
 
 .navbar-brand {
     font-size: 1.6rem;
+    margin-right: 8rem; /* Increased spacing between "Burhan" and "Home" in desktop view */
 }
 
 .nav-link {
@@ -366,6 +367,10 @@ footer {
 
 #home .social-icons {
     text-align: center;
+    color: #E6E6E6;
+    margin-left:10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease
 }
 
 /* Experience Section with Enhanced Timeline and Company Logos */
@@ -600,6 +605,11 @@ footer {
     background: #00D4FF; /* Active pagination dot in neon cyan */
 }
 
+/* Retain spacing between the name and typed text in #home */
+#home .header-content h1 {
+    margin-bottom: 1.5rem; /* Unchanged */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     body {
@@ -790,6 +800,11 @@ footer {
     /* Responsive Navbar Adjustments */
     .navbar {
         padding: 0.5rem 1rem; /* Reduced padding on mobile */
+    }
+
+    .navbar-brand {
+        margin-right: 0; /* No horizontal margin in mobile view */
+        margin-bottom: 4rem; /* Increased spacing between "Burhan" and "Home" in mobile view */
     }
 
     .navbar-nav {
