@@ -1,0 +1,804 @@
+body {
+    background-color: #0D1B2A; /* Deep space blue for AI theme */
+    color: #E6E6E6; /* Soft off-white text */
+    padding-top: 56px;
+    font-size: 1.4rem; /* Larger base font size */
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 1.3rem; /* Larger paragraphs */
+    color: #E6E6E6;
+}
+
+section {
+    background-color: #1B263B; /* Cyber gray for sections */
+    padding: 2rem 0;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3 {
+    color: #00D4FF; /* Neon cyan for headings */
+}
+
+h1 {
+    font-size: 5rem; /* Larger h1 */
+}
+
+h2 {
+    font-size: 3rem; /* Larger h2 */
+}
+
+h3 {
+    font-size: 2.5rem; /* Larger h3 */
+}
+
+.navbar {
+    background-color: #0D1B2A; /* Match body background */
+    padding: 1rem 2rem; /* Increased padding for better spacing */
+}
+
+.navbar-brand, .nav-link {
+    color: #E6E6E6 !important;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #FF00FF !important; /* Magenta on hover */
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28230, 230, 230, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.card {
+    background-color: #1B263B;
+    border: 1px solid #3E5270;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.card-title {
+    font-size: 1.6rem;
+}
+
+.card-text {
+    font-size: 1.3rem;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+.profile-img {
+    border: 5px solid #E6E6E6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 300px; /* Increased size */
+    height: 330px; /* Increased size */
+}
+
+.profile-img:hover {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #00D4FF;
+    border-color: #00D4FF;
+}
+
+.btn-primary:hover {
+    background-color: #FF00FF;
+    border-color: #FF00FF;
+}
+
+/* Skills Section with Circular Progress */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    margin: 20px;
+    text-align: center;
+}
+
+.skill-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#00D4FF var(--progress), #1B263B 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-circle::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #1B263B;
+    border-radius: 50%;
+}
+
+.skill-text {
+    position: absolute;
+    font-size: 1.5rem; /* Larger skill text */
+    color: #E6E6E6;
+    z-index: 1;
+}
+
+.skill-name {
+    margin-top: 10px;
+    font-size: 1.3rem; /* Larger skill name */
+    color: #E6E6E6;
+}
+
+.contact-section {
+    background-color: #1E2A3F; /* Slightly lighter dark shade */
+    color: #E6E6E6;
+    padding: 3rem 0;
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-section .form-control {
+    background-color: #0D1B2A;
+    border: 1px solid #3E5270;
+    color: #E6E6E6;
+    margin-bottom: 1rem;
+    font-size: 1.3rem; /* Larger form text */
+    padding: 0.8rem;
+}
+
+.contact-section .form-control::placeholder {
+    color: #A0A7B3;
+}
+
+.contact-section .btn {
+    background-color: #00D4FF;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.3rem; /* Larger button text */
+}
+
+.contact-section .btn:hover {
+    background-color: #FF00FF;
+}
+
+.contact-details h4 {
+    color: #00D4FF;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Larger contact heading */
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem; /* Larger contact details */
+}
+
+.social-icons a {
+    color: #E6E6E6;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FF00FF;
+}
+
+.profile-links a {
+    color: #E6E6E6;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.profile-links a:hover {
+    color: #FF00FF;
+}
+
+footer {
+    background-color: #0D1B2A;
+    color: #E6E6E6;
+    width: 100%;
+}
+
+/* Vertical Timeline Style for Education Section */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline li {
+    position: relative;
+    padding: 10px 0 10px 40px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #00D4FF;
+    border-radius: 50%;
+    z-index: 1;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline li:hover::before {
+    width: 22px;
+    height: 22px;
+    background-color: #FF00FF;
+}
+
+.timeline li::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 25px;
+    bottom: -25px;
+    width: 2px;
+    background-color: #A0A7B3;
+    z-index: 0;
+}
+
+.timeline li:last-child::after {
+    bottom: 0;
+}
+
+.timeline .years {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.5rem; /* Larger years */
+    color: #E6E6E6;
+}
+
+.timeline .degree {
+    margin-bottom: 5px;
+    font-size: 1.3rem; /* Larger degree */
+    color: #E6E6E6;
+}
+
+.timeline .institution {
+    color: #A0A7B3;
+    font-size: 1.2rem; /* Larger institution */
+    margin-bottom: 0;
+}
+
+/* Home Section with Background Image */
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg') no-repeat center/cover;
+    background-color: #0D1B2A;
+    background-attachment: fixed;
+    min-height: 100vh; /* Changed from height to min-height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #E6E6E6;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    padding-top: 70px; /* Account for fixed navbar */
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.header-content {
+    margin-bottom: 3rem;
+}
+
+#home .intro-section {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+#home h1 {
+    font-size: 5rem; /* Larger h1 */
+    margin-bottom: 1rem;
+    color: #E6E6E6;
+}
+
+#home .typed-text {
+    font-size: 2.5rem; /* Larger animated text */
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #E6E6E6;
+}
+
+#home .intro-text {
+    font-size: 1.5rem; /* Larger intro text */
+    line-height: 1.7;
+    text-align: left;
+    color: #E6E6E6;
+}
+
+#home .social-icons {
+    text-align: center;
+}
+
+/* Experience Section with Enhanced Timeline and Company Logos */
+#experience {
+    background-color: #1B263B;
+    color: #E6E6E6;
+    padding: 3rem 0;
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+
+#experience h2 {
+    color: #00D4FF;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.experience-timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    max-width: 800px; /* Increased width for better layout */
+    margin: 0 auto;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Slightly thicker timeline */
+    background-color: #00D4FF; /* Neon cyan */
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.experience-timeline li:hover ~ .experience-timeline::before {
+    background-color: #FF00FF; /* Change timeline color to magenta on hover */
+}
+
+.experience-timeline li {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px; /* Increased spacing between items */
+    padding: 20px; /* Added more padding around content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(26, 38, 51, 0.7); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    border-left: 3px solid #00D4FF; /* Left border accent for odd items */
+    border-right: 3px solid #00D4FF; /* Right border accent for even items */
+}
+
+.experience-timeline li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    z-index: 2; /* Ensure the hovered item appears above others */
+}
+
+.experience-timeline li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    padding-right: 80px; /* Increased spacing to accommodate larger image */
+    border-right: none; /* Remove right border for odd items */
+}
+
+.experience-timeline li:nth-child(odd):hover {
+    border-left: 3px solid #FF00FF; /* Change border color on hover */
+}
+
+.experience-timeline li:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    padding-left: 80px; /* Increased spacing to accommodate larger image */
+    border-left: none; /* Remove left border for even items */
+}
+
+.experience-timeline li:nth-child(even):hover {
+    border-right: 3px solid #FF00FF; /* Change border color on hover */
+}
+
+.experience-timeline li::before {
+    content: '';
+    position: absolute;
+    top: 20px; /* Centered vertically */
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Glow effect updated for neon cyan */
+    border: 3px solid #00D4FF; /* Border around image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-timeline li:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.8); /* Enhanced glow on hover */
+    border-color: #FF00FF; /* Change border color on hover */
+}
+
+.experience-timeline li:nth-child(odd)::before {
+    right: -30px; /* Adjusted position for larger image */
+    background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+.experience-timeline li:nth-child(even)::before {
+    left: -30px; /* Adjusted position for larger image */
+    background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80');
+}
+
+.experience-timeline .years {
+    font-weight: bold;
+    margin-bottom: 8px; /* Increased spacing */
+    font-size: 1.5rem; /* Larger years */
+    color: #00D4FF; /* Changed to neon cyan for emphasis */
+}
+
+.experience-timeline .role {
+    font-weight: bold;
+    margin-bottom: 10px; /* Increased spacing */
+    font-size: 2rem; /* Larger role */
+    color: #E6E6E6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Text shadow for depth */
+}
+
+.experience-timeline .location {
+    margin-bottom: 15px; /* Increased spacing */
+    font-style: italic;
+    font-size: 1.2rem; /* Larger location */
+    color: #AAB8C2; /* Lighter color for better readability */
+}
+
+.experience-timeline .description {
+    line-height: 1.7; /* Increased line height for readability */
+    font-size: 1.3rem; /* Larger description */
+    color: #E6E6E6;
+    position: relative;
+    padding-left: 10px; /* Indent text */
+}
+
+.experience-timeline .description::before {
+    content: '→ '; /* Arrow bullet point */
+    position: absolute;
+    left: 0px;
+    color: #00D4FF; /* Neon cyan */
+}
+
+.experience-timeline .description:hover::before {
+    color: #FF00FF; /* Change arrow color on hover */
+}
+
+/* Profiles Section with All Profiles */
+#profiles .profile-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Burhan GPT Modal and Project Details Modal */
+.modal-content {
+    background-color: #1E2A3F;
+    color: #E6E6E6;
+}
+
+.modal-header {
+    border-bottom: 1px solid #3E5270;
+}
+
+.modal-footer {
+    border-top: 1px solid #3E5270;
+}
+
+.modal-title {
+    color: #00D4FF;
+}
+
+.close {
+    color: #E6E6E6;
+}
+
+.close:hover {
+    color: #FF00FF;
+}
+
+.btn-secondary {
+    background-color: #00D4FF;
+    border-color: #00D4FF;
+}
+
+.btn-secondary:hover {
+    background-color: #FF00FF;
+    border-color: #FF00FF;
+}
+
+/* Swiper Styles for Project Details Modal */
+.project-details-swiper {
+    width: 100%;
+    height: 400px; /* Fixed height for consistency */
+    margin-bottom: 1rem;
+}
+
+.project-details-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-details-swiper .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure images fit within the slide without distortion */
+}
+
+.project-details-swiper .swiper-button-next,
+.project-details-swiper .swiper-button-prev {
+    color: #00D4FF; /* Neon cyan arrows */
+}
+
+.project-details-swiper .swiper-button-next:hover,
+.project-details-swiper .swiper-button-prev:hover {
+    color: #FF00FF; /* Magenta on hover */
+}
+
+.project-details-swiper .swiper-pagination-bullet {
+    background: #A0A7B3; /* Default pagination color */
+}
+
+.project-details-swiper .swiper-pagination-bullet-active {
+    background: #00D4FF; /* Active pagination dot in neon cyan */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    #home {
+        min-height: auto; /* Allow the section to grow based on content */
+        height: auto; /* Override min-height for mobile */
+        padding-top: 70px; /* Ensure content isn't hidden behind navbar */
+        padding-bottom: 2rem; /* Add bottom padding for spacing */
+        justify-content: flex-start; /* Start content from the top */
+    }
+    #home .typed-text {
+        font-size: 1.8rem;
+    }
+    #home .intro-text {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    #home .social-icons {
+        position: relative; /* Remove absolute positioning */
+        bottom: auto; /* Remove bottom offset */
+        margin-top: 1rem; /* Add spacing above social icons */
+    }
+    #home .profile-img {
+        margin: 0 auto;
+        width: 250px; /* Adjusted for mobile */
+        height: 280px; /* Adjusted for mobile */
+    }
+    #home .intro-section {
+        margin-bottom: 2rem;
+    }
+    /* Fix background attachment for mobile */
+    #home {
+        background-attachment: scroll; /* Disable fixed background on mobile */
+    }
+    .timeline li {
+        padding: 10px 0 10px 30px;
+    }
+    .timeline li::before {
+        left: 4px;
+        top: 5px;
+    }
+    .timeline li::after {
+        left: 14px;
+    }
+    .timeline .years {
+        font-size: 1.3rem;
+    }
+    .timeline .degree {
+        font-size: 1.1rem;
+    }
+    .timeline .institution {
+        font-size: 1rem;
+    }
+
+    /* Experience Section in Mobile View - Match Education Timeline Style */
+    .experience-timeline {
+        max-width: 600px; /* Same as education timeline */
+        margin: 0 auto; /* Center the timeline */
+    }
+
+    .experience-timeline::before {
+        display: none; /* Remove the alternating timeline line */
+    }
+
+    .experience-timeline li {
+        width: 100%; /* Full width like education timeline */
+        left: 0; /* Align to the left */
+        text-align: left; /* Align text to the left */
+        padding: 10px 0 10px 30px; /* Match education timeline padding */
+        margin-bottom: 20px; /* Match education timeline spacing */
+        border: none; /* Remove borders */
+        background-color: transparent; /* Remove semi-transparent background */
+    }
+
+    .experience-timeline li::before {
+        content: ''; /* Add dot like education timeline */
+        position: absolute;
+        left: 4px; /* Match education timeline dot position */
+        top: 5px; /* Match education timeline dot position */
+        width: 20px; /* Same dot size */
+        height: 20px; /* Same dot size */
+        background-color: #00D4FF; /* Neon cyan dot */
+        border-radius: 50%; /* Circular dot */
+        z-index: 1;
+        transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+        background-image: none; /* Remove company logo image */
+        border: none; /* Remove border around dot */
+        box-shadow: none; /* Remove glow effect */
+    }
+
+    .experience-timeline li:hover::before {
+        width: 22px; /* Match education timeline hover effect */
+        height: 22px; /* Match education timeline hover effect */
+        background-color: #FF00FF; /* Match education timeline hover color */
+        transform: none; /* Remove scale effect */
+    }
+
+    .experience-timeline li::after {
+        content: ''; /* Add vertical line like education timeline */
+        position: absolute;
+        left: 14px; /* Match education timeline line position */
+        top: 25px; /* Match education timeline line position */
+        bottom: -25px; /* Match education timeline line length */
+        width: 2px; /* Match education timeline line width */
+        background-color: #A0A7B3; /* Match education timeline line color */
+        z-index: 0;
+    }
+
+    .experience-timeline li:last-child::after {
+        bottom: 0; /* Match education timeline last item */
+    }
+
+    .experience-timeline li:nth-child(odd) {
+        padding-right: 15px; /* Match education timeline padding */
+        text-align: left; /* Align text to the left */
+    }
+
+    .experience-timeline li:nth-child(odd)::before {
+        left: 4px; /* Match education timeline dot position */
+        right: auto;
+    }
+
+    .experience-timeline li:nth-child(even) {
+        padding-left: 30px; /* Match education timeline padding */
+    }
+
+    .experience-timeline li:nth-child(even)::before {
+        left: 4px; /* Match education timeline dot position */
+    }
+
+    .experience-timeline .years {
+        font-size: 1.3rem; /* Match education timeline years */
+        color: #E6E6E6; /* Match education timeline color */
+    }
+
+    .experience-timeline .role {
+        font-size: 1.1rem; /* Match education timeline degree/role */
+        color: #E6E6E6; /* Match education timeline color */
+        text-shadow: none; /* Remove text shadow */
+    }
+
+    .experience-timeline .location {
+        font-size: 1rem; /* Match education timeline institution */
+        color: #A0A7B3; /* Match education timeline color */
+        font-style: normal; /* Remove italic style */
+    }
+
+    .experience-timeline .description {
+        font-size: 1.1rem; /* Match education timeline font size */
+        padding-left: 0; /* Remove indent */
+    }
+
+    .experience-timeline .description::before {
+        display: none; /* Remove arrow bullet point */
+    }
+
+    .skill-text {
+        font-size: 1.3rem;
+    }
+    .skill-name {
+        font-size: 1.1rem;
+    }
+    .card-title {
+        font-size: 1.4rem;
+    }
+    .card-text {
+        font-size: 1.1rem;
+    }
+    .project-details-swiper {
+        height: 300px; /* Smaller height on mobile */
+    }
+
+    /* Responsive Navbar Adjustments */
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduced padding on mobile */
+    }
+
+    .navbar-nav {
+        padding: 1rem 0; /* Add padding to the collapsed menu */
+    }
+
+    .nav-link {
+        font-size: 1.1rem; /* Slightly smaller font on mobile */
+        padding: 0.5rem 1rem;
+        text-align: center; /* Center nav links in collapsed menu */
+    }
+}

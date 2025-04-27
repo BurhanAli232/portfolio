@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burhan's Portfolio</title>
+    <!-- Bootstrap CSS for responsive design -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for social media and profile icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Fixed Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#">Burhan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profiles">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="downloadCV">Download CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#burhanGPTModal">Burhan GPT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Burhan GPT Modal -->
+    <div class="modal fade" id="burhanGPTModal" tabindex="-1" role="dialog" aria-labelledby="burhanGPTModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="burhanGPTModalLabel">Burhan GPT Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Burhan is working on BURHAN GPT, so please wait a few days.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal with Swiper -->
+    <div class="modal fade" id="projectDetailsModal" tabindex="-1" role="dialog" aria-labelledby="projectDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Swiper Container -->
+                    <div class="swiper-container project-details-swiper">
+                        <div class="swiper-wrapper" id="projectDetailsSwiperWrapper">
+                            <!-- Slides will be dynamically added here by JavaScript -->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <p id="projectDetailsText" class="mt-3"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section with Background Image, Typed Animation, Introduction, and Social Icons -->
+    <section id="home">
+        <div class="container">
+            <div class="header-content">
+                <h1>Burhan Ali</h1>
+                <p class="typed-text"><span id="typed">AI | ML Engineer</span></p>
+            </div>
+            <div class="intro-section">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <p class="intro-text">
+                            Hi, I’m Burhan, an 8th-semester Computer Science student at Aspire College of Narwal, specializing in Artificial Intelligence. I’m passionate about leveraging AI to solve real-world problems, with hands-on experience in machine learning and natural language processing projects. Let’s connect to explore innovative solutions together!
+                        </p>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" srcset="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg 480w, https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg 800w" sizes="(max-width: 600px) 480px, 800px" alt="Burhan's Picture" class="img-fluid rounded-circle profile-img">
+                    </div>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com/burhanali4545"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/Burhanali2322"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/burhanali232"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/burhanali4545"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section with Vertical Timeline -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="years">2017 - 2019</div>
+                    <div class="degree">Matric (Science Group)</div>
+                    <div class="institution">Govt C. D. Islamia High School Talwandi Bhindran, Narowal</div>
+                </li>
+                <li>
+                    <div class="years">2019 – 2021</div>
+                    <div class="degree">ICS (Intermediate in Computer Science)</div>
+                    <div class="institution">Aspire Group Of College Narowal, Narowal</div>
+                </li>
+                <li>
+                    <div class="years">2021 – 2025</div>
+                    <div class="degree">BSCS (Bachelor of Science in Computer Science)</div>
+                    <div class="institution">University Of Sahiwal, Sahiwal</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section with Circular Progress -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-circle" style="--progress: 90%;" data-progress="90">
+                        <div class="skill-text">90%</div>
+                    </div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle" style="--progress: 85%;" data-progress="85">
+                        <div class="skill-text">85%</div>
+                    </div>
+                    <div class="skill-name">Machine Learning</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle" style="--progress: 80%;" data-progress="80">
+                        <div class="skill-text">80%</div>
+                    </div>
+                    <div class="skill-name">Deep Learning</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle" style="--progress: 75%;" data-progress="75">
+                        <div class="skill-text">75%</div>
+                    </div>
+                    <div class="skill-name">TensorFlow</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle" style="--progress: 70%;" data-progress="70">
+                        <div class="skill-text">70%</div>
+                    </div>
+                    <div class="skill-name">Natural Language Processing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 project-card" data-toggle="modal" data-target="#projectDetailsModal" data-title="Burhan_documentGPT" data-image="gpt.jpeg,gpt.jpeg" data-details="This is my first GPT named Burhan_documentGPT. It supports file uploads (doc, pdf) up to 200MB, generates text chunks, and stores them in a vector database using Hugging Face. The output is displayed on the screen. The input field is hidden until a file is uploaded. It requires an Open API Key and Hugging Face Key to function. <br><a href='https://example.com/burhan-document-gpt' target='_blank' style='color: #00D4FF;'>Visit Live Project</a>">
+                        <img src="gpt.jpeg" class="card-img-top" alt="AI Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Burhan_documentGPT</h5>
+                            <p class="card-text">A GPT for document processing with file uploads, text chunking, and vector storage using Hugging Face.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 project-card" data-toggle="modal" data-target="#projectDetailsModal" data-title="Burhan_documentGPT" data-image="pizabot.PNG,pizabot2.PNG" data-details="This is my first GPT named Burhan_documentGPT. It supports file uploads (doc, pdf) up to 200MB, generates text chunks, and stores them in a vector database using Hugging Face. The output is displayed on the screen. The input field is hidden until a file is uploaded. It requires an Open API Key and Hugging Face Key to function. <br><a href='https://chatbot-repo-three.vercel.app' target='_blank' style='color: #00D4FF;'>Visit Live Project</a>">
+                        <img src="pizabot.PNG" class="card-img-top" alt="AI Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Burhan_documentGPT</h5>
+                            <p class="card-text">A GPT for document processing with file uploads, text chunking, and vector storage using Hugging Face.</p>
+                            <a href='https://chatbot-repo-three.vercel.app' target='_blank' style='color: #00D4FF;'>Visit Live Project</a>
+                            <p class="card-text">For more details click </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 project-card" data-toggle="modal" data-target="#projectDetailsModal" data-title="Sentiment Analysis Tool" data-image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" data-details="Created a tool to analyze sentiment in text data using machine learning techniques, providing accurate classification of emotions.">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="AI Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Sentiment Analysis Tool</h5>
+                            <p class="card-text">A machine learning tool to analyze and classify sentiment in text data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section with Centered Alternating Timeline and Company Logos -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="experience-timeline">
+                        <li>
+                            <div class="years">January 2025 – March 2025</div>
+                            <div class="role">AI Research Intern</div>
+                            <div class="location">Tech Innovations Lab, Lahore, Pakistan</div>
+                            <div class="description">
+                                Contributed to research projects on natural language processing, assisting in the development of AI models for text analysis and sentiment detection.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="years">May 2025 – June 2025</div>
+                            <div class="role">Machine Learning Intern</div>
+                            <div class="location">Arch Technologies, Islamabad, Pakistan</div>
+                            <div class="description">
+                                Participated in a Machine Learning Internship, focusing on hands-on application of AI concepts and collaborating on projects under the guidance of Arch Technologies.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profiles Section with All Profiles -->
+    <section id="profiles">
+        <div class="container">
+            <h2>Profiles</h2>
+            <div class="profile-links">
+                <a href="https://github.com/burhanali232" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/burhanali232" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Burhanali2322" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/burhanali4545" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://kaggle.com/alimughal102" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email*" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <div id="form-message" class="mt-3"></div>
+                </div>
+                <div class="col-md-4 contact-details">
+                    <h4>Burhan Ali</h4>
+                    <p>AI | Ml Engineer</p>
+                    <p>Phone: <span>0346-6675232</span></p>
+                    <p>Email: <a href="mailto:burhanali0145@gmail.com" style="color: #E6E6E6;">burhanali0145@gmail.com</a></p>
+                    <p>Website: <a href="https://www.yourwebsite.com" style="color: #E6E6E6;">www.yourwebsite.com</a></p>
+                    <div class="social-icons mt-3">
+                        <a href="https://facebook.com/burhanali4545"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Burhanali2322"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/in/burhanali232"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/burhanali4545"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>© 2025 Burhan. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS for navbar and modal -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Typed.js for animated typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
