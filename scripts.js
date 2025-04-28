@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to initialize Typed.js with appropriate text based on screen size
+    // Function to initialize Typed.js with appropriate text
     function initializeTyped() {
         const typedElement = document.getElementById('typed');
         const staticTextElement = document.getElementById('static-text');
@@ -14,16 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
             window.typedInstance = null;
         }
 
-        // Choose the text to animate based on screen size
-        const isMobile = window.innerWidth <= 768;
-        const strings = isMobile ? ['AI | ML Engineer'] : ['Computer Science Student', 'AI | ML Engineer'];
+        // Use the same strings for both desktop and mobile views
+        const strings = ['Computer Science Student', 'AI | ML Engineer'];
 
         // Initialize Typed.js
         try {
             window.typedInstance = new Typed('#typed', {
                 strings: strings,
-                typeSpeed: 50,
-                backSpeed: 30,
+                typeSpeed: 80,
+                backSpeed: 70,
                 loop: true
             });
         } catch (error) {
