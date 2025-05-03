@@ -15,15 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Use the same strings for both desktop and mobile views
-        const strings = ['Computer Science Student', 'AI | ML Engineer'];
+        const strings = ['AI | ML Engineer','Computer Science Student'];
 
         // Initialize Typed.js
         try {
             window.typedInstance = new Typed('#typed', {
                 strings: strings,
                 typeSpeed: 80,
-                backSpeed: 70,
-                loop: true
+                backSpeed: 60,
+                loop: true,
+                showCursor: false // Enable the cursor
             });
         } catch (error) {
             console.error('Error initializing Typed.js:', error);
